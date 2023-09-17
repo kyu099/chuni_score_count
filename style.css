@@ -7,3 +7,14 @@ body {
     height: 100%; 
     text-align: center;
 }
+
+table{
+    margin: auto;
+    width: 240px
+}
+th{
+    text-align: right;
+}
+td{
+    text-align: right;
+}
