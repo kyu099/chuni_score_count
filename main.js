@@ -127,6 +127,7 @@ document.getElementById("test").onclick = async () => {
   out2.innerHTML += `<tr> <td>14</td> <td>${lostscore["14"]}</td> <td>${Math.floor(lostscore["14"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
   out2.innerHTML += `<tr> <td>14+</td> <td>${lostscore["14.5"]}</td> <td>${Math.floor(lostscore["14.5"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
   out2.innerHTML += `<tr> <td>15</td> <td>${lostscore["15"]}</td> <td>${Math.floor(lostscore["15"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
+  out2.innerHTML += `<tr> <th>合計</th> <th>${masterlostscore}</th> <th>${Math.floor(masterlostscore * 1000000 / masterlostscore) / 10000}%</th> </tr>`;
 
   out3.innerHTML = "";
   out3.innerHTML += `<tr> <th>ジャンル</th> <th>失点</th> <th>割合</th> </tr>`;
@@ -137,6 +138,7 @@ document.getElementById("test").onclick = async () => {
   out3.innerHTML += `<tr> <td>イロドリミドリ</td> <td>${lostscore["イロドリミドリ"]}</td> <td>${Math.floor(lostscore["イロドリミドリ"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
   out3.innerHTML += `<tr> <td>ゲキマイ</td> <td>${lostscore["ゲキマイ"]}</td> <td>${Math.floor(lostscore["ゲキマイ"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
   out3.innerHTML += `<tr> <td>ORIGINAL</td> <td>${lostscore["ORIGINAL"]}</td> <td>${Math.floor(lostscore["ORIGINAL"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
+  out3.innerHTML += `<tr> <th>合計</th> <th>${masterlostscore}</th> <th>${Math.floor(masterlostscore * 1000000 / masterlostscore) / 10000}%</th> </tr>`;
 
   //console.log(lostscore);
 }
