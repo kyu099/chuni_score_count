@@ -138,5 +138,5 @@ document.getElementById("test").onclick = async () => {
   out3.innerHTML += `<tr> <td>ゲキマイ</td> <td>${lostscore["ゲキマイ"]}</td> <td>${Math.floor(lostscore["ゲキマイ"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
   out3.innerHTML += `<tr> <td>ORIGINAL</td> <td>${lostscore["ORIGINAL"]}</td> <td>${Math.floor(lostscore["ORIGINAL"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
 
-  console.log(lostscore);
+  //console.log(lostscore);
 }
