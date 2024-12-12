@@ -28,11 +28,11 @@ document.getElementById("test").onclick = async () => {
   masterlostscore = masterdata.length * 1010000 - masterscore;
   out1.innerHTML = `あなたの失点は <b>${masterlostscore}</b> 点です`
 
-  let score = {"10":0, "10.5":0, "11":0, "11.5":0, "12":0, "12.5":0, "13":0, "13.5":0, "14":0, "14.5":0, "15":0, "POPS&ANIME":0, "niconico":0, "東方Project":0, "VARIETY":0, "イロドリミドリ":0, "ゲキマイ":0, 
+  let score = {"10":0, "10.5":0, "11":0, "11.5":0, "12":0, "12.5":0, "13":0, "13.5":0, "14":0, "14.5":0, "15":0, "15.5":0, "POPS&ANIME":0, "niconico":0, "東方Project":0, "VARIETY":0, "イロドリミドリ":0, "ゲキマイ":0, 
   "ORIGINAL":0};
-  let count = {"10":0, "10.5":0, "11":0, "11.5":0, "12":0, "12.5":0, "13":0, "13.5":0, "14":0, "14.5":0, "15":0, "POPS&ANIME":0, "niconico":0, "東方Project":0, "VARIETY":0, "イロドリミドリ":0, "ゲキマイ":0, 
+  let count = {"10":0, "10.5":0, "11":0, "11.5":0, "12":0, "12.5":0, "13":0, "13.5":0, "14":0, "14.5":0, "15":0, "15.5":0, "POPS&ANIME":0, "niconico":0, "東方Project":0, "VARIETY":0, "イロドリミドリ":0, "ゲキマイ":0, 
   "ORIGINAL":0};
-  let lostscore = {"10":0, "10.5":0, "11":0, "11.5":0, "12":0, "12.5":0, "13":0, "13.5":0, "14":0, "14.5":0, "15":0, "POPS&ANIME":0, "niconico":0, "東方Project":0, "VARIETY":0, "イロドリミドリ":0, "ゲキマイ":0, 
+  let lostscore = {"10":0, "10.5":0, "11":0, "11.5":0, "12":0, "12.5":0, "13":0, "13.5":0, "14":0, "14.5":0, "15":0, "15.5":0, "POPS&ANIME":0, "niconico":0, "東方Project":0, "VARIETY":0, "イロドリミドリ":0, "ゲキマイ":0, 
   "ORIGINAL":0};
   for(i = 0; i < masterdata.length; i++) {
     if(masterdata[i].level == 10){
@@ -68,6 +68,9 @@ document.getElementById("test").onclick = async () => {
     } else if(masterdata[i].level == 15){
       score["15"] += masterdata[i].score;
       count["15"] += 1;
+    } else if(masterdata[i].level == 15.5){
+      score["15.5"] += masterdata[i].score;
+      count["15.5"] += 1;
     }
 
     if(masterdata[i].genre == "POPS&ANIME"){
@@ -105,6 +108,7 @@ document.getElementById("test").onclick = async () => {
   lostscore["14"] = count["14"] * 1010000 - score["14"];
   lostscore["14.5"] = count["14.5"] * 1010000 - score["14.5"];
   lostscore["15"] = count["15"] * 1010000 - score["15"];
+  lostscore["15.5"] = count["15.5"] * 1010000 - score["15.5"];
 
   lostscore["POPS&ANIME"] = count["POPS&ANIME"] * 1010000 - score["POPS&ANIME"];
   lostscore["niconico"] = count["niconico"] * 1010000 - score["niconico"];
@@ -127,6 +131,7 @@ document.getElementById("test").onclick = async () => {
   out2.innerHTML += `<tr> <td>14</td> <td>${lostscore["14"]}</td> <td>${Math.floor(lostscore["14"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
   out2.innerHTML += `<tr> <td>14+</td> <td>${lostscore["14.5"]}</td> <td>${Math.floor(lostscore["14.5"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
   out2.innerHTML += `<tr> <td>15</td> <td>${lostscore["15"]}</td> <td>${Math.floor(lostscore["15"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
+  out2.innerHTML += `<tr> <td>15+</td> <td>${lostscore["15.5"]}</td> <td>${Math.floor(lostscore["15.5"] * 1000000 / masterlostscore) / 10000}%</td> </tr>`;
   out2.innerHTML += `<tr> <th>合計</th> <th>${masterlostscore}</th> <th>${Math.floor(masterlostscore * 1000000 / masterlostscore) / 10000}%</th> </tr>`;
 
   out3.innerHTML = "";
